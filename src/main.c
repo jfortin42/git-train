@@ -6,7 +6,7 @@
 /*   By: jfortin <jfortin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 15:37:11 by jfortin           #+#    #+#             */
-/*   Updated: 2019/05/20 16:47:05 by jfortin          ###   ########.fr       */
+/*   Updated: 2019/05/20 16:55:27 by jfortin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	main(void)
 		else if (mysterious_nbr < input)
 			printf("It's less !\n\n");
 		else
-			printf ("Congratulation, you found the mysterious number in %d tries !!!\n\n", tries);
+			printf ("Congratulation, you found the mysterious number in %d %s !!!\n\n", tries, tries > 1 ? "tries" : "try");
 	} while (input != mysterious_nbr);
 	
 	return (EXIT_SUCCESS);
