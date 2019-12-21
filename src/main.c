@@ -6,7 +6,7 @@
 /*   By: jfortin <jfortin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 15:37:11 by jfortin           #+#    #+#             */
-/*   Updated: 2019/05/20 16:55:27 by jfortin          ###   ########.fr       */
+/*   Updated: 2019/05/29 04:05:34 by jfortin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,15 @@ int	main(void)
 	{
 		// ask the number
 		printf("What is the number ? ");
-		scanf("%d", &input);
+		if (scanf("%d", &input) != 1)
+		{
+			// int	c;
+			// while ((c = getchar()) != '\n' && c != EOF);
+			freopen(NULL, "r", stdin);
+			printf("wrong caracter\n\n");
+			continue;
+		}
+		freopen(NULL, "r", stdin);
 
 		// increment tries
 		tries++;
